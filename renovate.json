@@ -17,7 +17,7 @@
                 "originalImage=(?<depName>.*?)\\n[^\\n]+",
                 "version: (?<currentValue>\\d+\\.\\d+\\.\\d+)(@(?<currentDigest>sha256:[a-f0-9]+))?"
             ],
-            "autoReplaceStringTemplate": "originalImage={{{depName}}}\nversion: {{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
+            "autoReplaceStringTemplate": "version: {{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
             "datasourceTemplate": "docker"
         }
     ]
