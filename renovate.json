@@ -12,10 +12,12 @@
             "fileMatch": [
                 "^.*\\.ya?ml$"
             ],
+            "matchStringsStrategy": "recursive",
             "matchStrings": [
-                "originalImage=(?<depName>(?<packageName>.*?)\\s[\\w\\s\\:\\-\\/]*:\\s*)(?<currentValue>[vV]?\\d+[\\.\\-\\w+]*)(@(?<currentDigest>sha256:[a-f0-9]+))?"
+                "originalImage=(?<packageName>.*?)\\s",
+                "(?<depName>\\s[\\w\\s\\:\\-\\/]*:\\s*)(?<currentValue>[vV]?\\d+\\.\\d+\\.\\d+[\\.\\-\\w+]*)(@(?<currentDigest>sha256:[a-f0-9]+))?"
             ],
-            "autoReplaceStringTemplate": "originalImage={{{depName}}}{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
+            "autoReplaceStringTemplate": "originalImage={{{packageName}}}\n{{{depName}}}{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
             "datasourceTemplate": "docker"
         }
     ]
