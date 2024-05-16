@@ -15,9 +15,9 @@
             "matchStringsStrategy": "recursive",
             "matchStrings": [
                 "originalImage=(?<packageName>.*)\\n[^\\n]+",
-                "(?<depName>version: )(?<currentValue>\\d+\\.\\d+\\.\\d+)(@(?<currentDigest>sha256:[a-f0-9]+))?"
+                "version: (?<currentValue>\\d+\\.\\d+\\.\\d+)(@(?<currentDigest>sha256:[a-f0-9]+))?"
             ],
-            "autoReplaceStringTemplate": "originalImage={{{packageName}}}\n{{{depName}}}{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
+            "autoReplaceStringTemplate": "originalImage={{{packageName}}}\nversion: {{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
             "datasourceTemplate": "docker"
         }
     ]
