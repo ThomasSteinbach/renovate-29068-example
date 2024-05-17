@@ -14,23 +14,10 @@
             ],
             "matchStringsStrategy": "recursive",
             "matchStrings": [
-                "originalImage=(?<packageName>.*?)\\n[^\\n]+",
-                "(?<depName>[^\\:\\s]+):\\s+(?<currentValue>\\d+\\.\\d+\\.\\d+[\\w\\-\\.]*)(@(?<currentDigest>sha256:[a-f0-9]+))?"
+                "originalImage=(?<depName>.*?)\\n[^\\n]+",
+                "(?<currentValue>\\d+\\.\\d+\\.\\d+[\\w\\-\\.]*)(@(?<currentDigest>sha256:[a-f0-9]+))?"
             ],
-            "autoReplaceStringTemplate": "{{{depName}}}: {{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
-            "datasourceTemplate": "docker"
-        },
-        {
-            "customType": "regex",
-            "fileMatch": [
-                "^.*\\.ya?ml$"
-            ],
-            "matchStringsStrategy": "recursive",
-            "matchStrings": [
-                "originalImage=(?<packageName>.*?)\\n[^\\n]+",
-                "(?<depName>[^\\:\\s]+):(?<currentValue>\\d+\\.\\d+\\.\\d+[\\w\\-\\.]*)(@(?<currentDigest>sha256:[a-f0-9]+))?"
-            ],
-            "autoReplaceStringTemplate": "{{{depName}}}:{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
+            "autoReplaceStringTemplate": "{{{newValue}}}{{#if newDigest}}@{{{newDigest}}}{{/if}}",
             "datasourceTemplate": "docker"
         }
     ]
