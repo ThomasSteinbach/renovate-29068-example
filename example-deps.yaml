@@ -2,7 +2,7 @@ foo1: bar1
 # originalImage=alpine
 version: 3.19.1
 # originalImage=nginx
-dockertag: 1.26.0-alpine3.19-perl
+dockertag: 1.27.0-alpine3.19-perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
 foo2: bar2
 # originalImage=busybox
 image: my-custom-registry/busybox:1.36.1
