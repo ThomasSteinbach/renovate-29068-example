@@ -1,11 +1,11 @@
 foo1: bar1
 # originalImage=alpine
-version: 3.19.1
+version: 3.19.1@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
 # originalImage=nginx
-dockertag: 1.26.0-alpine3.19-perl
+dockertag: 1.26.0-alpine3.19-perl@sha256:3ea80b94b37ee5dcd7f20403fa5d133fe8411eb9e38cdc3ec7c375c7c7ecb80a
 foo2: bar2
 # originalImage=busybox
-image: my-custom-registry/busybox:1.36.1
+image: my-custom-registry/busybox:1.36.1@sha256:9ae97d36d26566ff84e8893c64a6dc4fe8ca6d1144bf5b87b2b85a32def253c7
 foo3: bar3
 # originalImage=traefik
-generation: my-custom-registry/image/custom-traefik:3.0.0-windowsservercore-ltsc2022
+generation: my-custom-registry/image/custom-traefik:3.0.0-windowsservercore-ltsc2022@sha256:4f6962fc9d1182cd8c2b8bebeecca80734d1a280e8a220d1fad3830020d95191
